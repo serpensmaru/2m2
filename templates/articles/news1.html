@@ -1,0 +1,22 @@
+{% extends "articles/base.html" %}
+
+{% load static %}
+
+{% block title %}Новости{% endblock %}
+
+{% block content %}
+
+
+    {% for article in object_list %}
+
+    {{ article.title }}
+    {{ article.text }}
+    <p></p>
+    <p></p>
+      {% endfor %}
+
+        {% for tg in article.tag %}
+            {{ tg.name }}
+
+        {% endfor %}
+    {% endblock %}
